@@ -34,7 +34,6 @@ def translate(text, target_language, key):
 
 
 st.header("Google Api translater")
-#st.info("说明：输入中文得英文，输入英文得中文，输入韩语、日语、俄语、法语、葡萄牙语、西班牙语将得到中文")
 text = st.text_input("通訳したい内容を入力してください")
 
 if len(text)>0:
