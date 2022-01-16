@@ -3,7 +3,7 @@ import re
 import streamlit as st
 import langid
 
-st.set_page_config(page_title="多语种翻译工具", page_icon="📖", layout="wide")
+st.set_page_config(page_title="Translater", page_icon="📖", layout="wide")
 
 sysmenu = '''
 <style>
@@ -39,18 +39,18 @@ text = st.text_input("通訳したい内容を入力してください")
 if len(text)>0:
     #st.write(langid.classify(text)[0])
     if langid.classify(text)[0] == "en":#英语
-        translate(text,"zh",4)
+        translate(text,"ja",4)
     elif langid.classify(text)[0] == "zh":#中文
-        translate(text,"en",3)
+        translate(text,"ja",4)
     elif langid.classify(text)[0] == "ko":#韩语
-        translate(text,"zh",4)
+        translate(text,"ja",4)
     elif langid.classify(text)[0] == "ja":#日语
         translate(text,"zh",5)
     elif langid.classify(text)[0] == "ru":#俄语
-        translate(text,"zh",4)
+        translate(text,"ja",4)
     elif langid.classify(text)[0] == "fr":#法语
-        translate(text,"zh",4)
+        translate(text,"ja",4)
     elif langid.classify(text)[0] == "ku":#葡萄牙语
-        translate(text,"zh",4)
+        translate(text,"ja",4)
     elif langid.classify(text)[0] == "pt":#西班牙语
-        translate(text,"zh",4)
+        translate(text,"ja",4)
